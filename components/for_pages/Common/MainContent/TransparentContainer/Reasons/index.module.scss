@@ -1,0 +1,36 @@
+@import "styles/index";
+
+.root {
+    display: flex;
+    flex-direction: column;
+    @include list(24px, false);
+}
+
+.title {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: $dark;
+}
+
+.content {
+    display: flex;
+    @include list(16px, true);
+}
+
+.left {}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    @include list(16px, false);
+    flex: 1;
+}
+
+.top,
+.bottom {
+    display: flex;
+    @include list(16px, true);
+    flex: 1;
+}

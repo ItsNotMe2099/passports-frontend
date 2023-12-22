@@ -1,0 +1,41 @@
+@import "styles/index";
+
+.root {
+    display: flex;
+    @include list(24px, true);
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    @include list(24px, false);
+}
+
+.icon {
+    width: 204px !important;
+    height: 204px !important;
+    position: relative !important;
+}
+
+.title {
+    color: #26324A;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.btn {
+    align-self: flex-start;
+}
+
+.right {
+    border-radius: 30px;
+    background: #F3F6FC;
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    @include list(32px, false);
+    flex: 1;
+}

@@ -1,0 +1,38 @@
+@import "styles/index";
+
+.root {
+    padding: 16px;
+    position: relative;
+    height: 488px;
+    display: flex;
+    align-items: flex-end;
+    flex: 1;
+
+    img {
+        border-radius: 30px;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    @include list(16px, false);
+    position: relative;
+    
+}
+
+.title {
+    color: #FFF;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.text {
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150.673%;
+}

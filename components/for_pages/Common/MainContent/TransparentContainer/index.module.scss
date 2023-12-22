@@ -1,0 +1,10 @@
+@import "styles/index";
+
+.root {
+    width: 80%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: flex;
+    flex-direction: column;
+    @include list(88px, false);
+}

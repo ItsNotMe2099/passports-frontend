@@ -1,0 +1,41 @@
+@import "styles/index";
+
+.root {
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    padding: 32px;
+    height: 468px;
+    justify-content: space-between;
+    padding-right: 97px;
+    position: relative;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    @include list(18px, false);
+}
+
+.title {
+    color: #FFF;
+    font-family: 'Commissioner';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.text {
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150.673%;
+}
+
+.img {
+    right: 0;
+    bottom: 74px;
+    position: absolute;
+}

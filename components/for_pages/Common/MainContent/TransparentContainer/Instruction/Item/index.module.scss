@@ -1,0 +1,46 @@
+@import "styles/index";
+
+.root {
+    display: flex;
+    flex-direction: column;
+    @include list(16px, false);
+    background-color: $white;
+    padding: 16px;
+    border-radius: 30px;
+    flex: 1;
+}
+
+.number {
+    width: 40px;
+    height: 40px;
+    background-color: $blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: $white;
+    border-radius: 100%;
+}
+
+.bulgaria {
+    background-color: $green;
+}
+
+.title {
+    color: #26324A;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.text {
+    color: #687CA2;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}

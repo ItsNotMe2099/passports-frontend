@@ -1,0 +1,20 @@
+@import "styles/index";
+
+.root {
+    border-radius: 16px;
+    background: rgba(0, 0, 0, 0.21);
+    backdrop-filter: blur(4.900000095367432px);
+    display: flex;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    @include list(16px, true);
+}
+
+.text {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    color: $white;
+}

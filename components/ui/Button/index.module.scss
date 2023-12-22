@@ -1,0 +1,133 @@
+@import "styles/index";
+
+.root {
+  display: flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  border: 0;
+  cursor: pointer;
+  font-family: 'Commissioner';
+
+  &.disabled {}
+
+  &.fluid {
+    width: 100%;
+  }
+}
+
+.noBorder {
+  border: 0;
+}
+
+//font
+.blue-font {
+  color: $blue;
+}
+
+.black-font {
+  color: $dark2;
+}
+
+.green-font {
+  color: $green;
+}
+
+.white-font {
+  color: $white;
+}
+
+//color
+
+.green {
+  background-color: $green;
+
+  &:hover {}
+
+  &:active {}
+}
+
+.white {
+  background: $white;
+
+  &:hover {}
+
+  &:active {}
+}
+
+.blue {
+  background-color: $blue;
+
+  &:hover {}
+
+  &:active {}
+}
+
+.light-blue {
+  background-color: $light-blue;
+
+  &:hover {}
+
+  &:active {}
+}
+
+.light-green {
+  background-color: $light-green;
+
+  &:hover {}
+
+  &:active {}
+}
+
+.transparent {
+  background: transparent;
+  
+}
+
+.spinner {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinnerVisible {
+  visibility: visible;
+}
+
+.withIcon {
+
+  .text {
+    display: flex;
+    align-items: center;
+    grid-gap: 8px;
+  }
+}
+
+.text {
+  visibility: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.textHidden {
+  visibility: hidden;
+}
+
+.reverse {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.circle {
+  border-radius: 100%;
+}

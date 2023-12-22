@@ -1,0 +1,42 @@
+@import "styles/index";
+
+.root {
+    border-radius: 30px;
+    background: #3575F5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @include list(32px, false);
+    padding: 64px;
+    padding-bottom: 40px;
+    position: relative;
+}
+
+.title {
+    color: #FFF;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 0;
+}
+
+.bulgaria {
+    background: $green;
+}
+
+.text {
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+.phone {
+    width: 572px !important;
+    height: 497px !important;
+    inset: unset !important;
+    right: 0 !important;
+    top: -40% !important;
+}

@@ -1,0 +1,17 @@
+@import "styles/index";
+
+.root {
+    display: flex;
+    @include list(8px, true);
+    align-items: center;
+}
+
+.title {
+    font-family: 'Genos';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.48px;
+    text-transform: uppercase;
+}

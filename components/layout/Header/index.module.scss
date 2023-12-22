@@ -1,0 +1,53 @@
+@import "styles/index";
+
+.root {}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.news {
+  border-bottom: 1px solid #E0EAFF;
+  background: #FFF;
+
+  .wrapper {
+    width: 80%;
+  }
+}
+
+.fromTop {
+  border-bottom: 1px solid #E0EAFF;
+  background: #FFF;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex: 1;
+}
+
+.item {
+  color: $white;
+  font-family: 'Commissioner';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.32px;
+}
+
+.black {
+  color: $dark;
+}
+
+.right {
+  display: flex;
+  @include list(8px, true);
+  align-items: center;
+}

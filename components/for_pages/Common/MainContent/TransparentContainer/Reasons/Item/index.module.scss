@@ -1,0 +1,67 @@
+@import "styles/index";
+
+.root {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 32px;
+}
+
+.title {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: $dark;
+}
+
+.icon {
+    border-radius: 200px;
+    background: #EB4558;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    @include list(4px, false);
+}
+
+.colored {
+    display: flex;
+    padding: 4px 16px;
+    align-items: flex-start;
+    border-radius: 34px;
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    align-self: flex-start;
+    white-space: nowrap;
+}
+
+.text {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: $dark;
+}
+
+.reverse {
+    flex-direction: column-reverse;
+}
+
+.bigger {
+    width: 53%;
+}
+
+.stretch {
+    flex: 1;
+}

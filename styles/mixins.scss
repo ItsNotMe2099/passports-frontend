@@ -1,0 +1,389 @@
+@import "media";
+@import "html";
+@import "styles/variables";
+
+@mixin mq($width, $type: min) {
+  @if $type ==max {
+    $width: $width - 1px;
+  }
+
+  @media only screen and (#{$type}-width: $width) {
+    @content;
+  }
+}
+
+@mixin logo {
+  font-family: 'Sora';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.2px;
+}
+
+@mixin headerMenuItem {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: -0.16px;
+}
+
+@mixin h1 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.32px;
+}
+
+@mixin h2 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -0.24px;
+}
+
+@mixin h3 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -0.2px;
+}
+
+@mixin h4 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+@mixin itemWithText {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -0.16px;
+}
+
+@mixin quantity {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: -0.14px;
+}
+
+
+@mixin btnText {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+
+  @include mq($PhoneWidth, max) {
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
+
+@mixin fieldLabel {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  line-height: 100%;
+  letter-spacing: -0.2px;
+}
+
+@mixin mainText {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 100%;
+  /* 16px */
+  letter-spacing: -0.16px;
+}
+
+@mixin secondaryText {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.16px;
+}
+
+@mixin smallText {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: -0.14px;
+}
+
+@mixin container {
+  max-width: 1310px;
+  width: 100%;
+  padding: 0px 15px;
+  margin: 0 auto;
+
+  @include mq($DesktopWidth, max) {}
+
+  @include mq($lg-medium, min) {
+    //max-width: 1620px !important;
+  }
+}
+
+
+@mixin pageContainer {
+  @include container;
+  padding: 32px 0px 64px 0px;
+}
+
+@mixin filterContainer {
+  background-color: $white;
+  border-radius: $StandartBorderRadius;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  @include list(12px);
+
+  @include mq($PhoneWidth, max) {
+    padding: 0px;
+  }
+}
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+@mixin list($gap, $row: false) {
+  @if $row ==true {
+    &>*+* {
+      margin: 0 0 0 $gap;
+    }
+  }
+
+  @else {
+    &>*+* {
+      margin: $gap 0 0 0;
+    }
+  }
+}
+
+
+@mixin scroll_hide {
+  -ms-overflow-style: none;
+  /* IE и Edge */
+  scrollbar-width: none;
+
+  /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin pointer {
+  @include breakpoint("md", "up") {
+    cursor: pointer;
+  }
+}
+
+
+@mixin ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin ellipsis_row($row_count) {
+  display: -webkit-box;
+  -webkit-line-clamp: $row_count;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin overflow_hidden {
+  overflow: hidden;
+  mask-image: radial-gradient(white, black);
+}
+
+@mixin text_clickable {
+  text-decoration: underline;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@mixin square($size) {
+  height: $size;
+  width: $size;
+}
+
+@mixin label() {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: $text-secondary;
+
+  @include mq($PhoneWidth, max) {
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
+
+@mixin input() {
+  background-color: transparent;
+  border-radius: 8px;
+  width: 100%;
+  padding: 0 16px;
+  border: 0;
+  flex: 1;
+  -webkit-appearance: none;
+  font-size: 16px;
+  color: $text-primary;
+  line-height: $fieldHeightDefault;
+
+
+
+  &:-webkit-autofill {
+    -wкebkit-text-fill-color: $text-primary !important;
+  }
+
+  &::placeholder {
+    @include mainText;
+    color: $text-primary;
+  }
+
+  &.withSuffix {
+    padding-right: 8px;
+  }
+
+  &.withPrefix {
+    padding-left: 8px;
+  }
+
+  &.withClear {
+    padding-right: 0px;
+  }
+
+  &.inputError {
+    color: $text-red;
+  }
+
+  &.withLabel{
+    &.inputFocused, &.withValue {
+
+      padding-top: 12px;
+    }
+  }
+
+}
+
+
+@mixin inputWrapper() {
+  border: 1px solid $text-secondary;
+  border-radius: $StandartBorderRadius;
+
+  &.withPrefix,
+  &.withSuffix {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &.inputError {
+    border-color: $text-red;
+  }
+
+  &.inputFocused {
+    border-color: $text-secondary;
+  }
+}
+
+
+@mixin menuDropDown() {
+  z-index: $zIndexDropDown;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  @include list(16px, false);
+  border-radius: 24px;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+  &.opened {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+@mixin dropDown() {
+  z-index: $zIndexDropDown;
+  background: $white;
+  border-radius: 8px;
+  border: 1px solid $text-secondary;
+  margin-top: 2px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+  padding: 6px 0px;
+
+  &.opened {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    margin-top: 18px;
+  }
+}
+
+@mixin dropDownChevron() {
+  &.reversed {
+    transform: rotate(180deg);
+  }
+
+  transition: transform 0.3s ease;
+}
+
+
+@mixin infoLabel() {
+  color: $text-secondary;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+@mixin infoValue() {
+  color: $text-secondary;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+@mixin card() {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  background-color: $white;
+  border-radius: 24px;
+}
+
+
+@mixin maxLines($count) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $count;
+  -webkit-box-orient: vertical;
+}
+
+@mixin inputPlaceholder {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -0.16px;
+  color: $text-secondary;
+}
+

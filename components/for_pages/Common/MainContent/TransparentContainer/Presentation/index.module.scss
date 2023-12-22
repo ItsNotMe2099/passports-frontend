@@ -1,0 +1,22 @@
+@import "styles/index";
+
+.root {
+    display: flex;
+    justify-content: space-between;
+    padding: 23px 32px;
+    border-radius: 30px;
+    background: #3575F5;
+    align-items: center;
+}
+
+.bulgaria {
+    background-color: $green;
+}
+
+.left {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: $white;
+}

@@ -1,0 +1,32 @@
+@import "styles/index";
+
+.root {
+    padding-top: 184px;
+    padding-bottom: 81px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    @include list(32px, false);
+    margin: 0 auto;
+    width: 58%;
+    align-items: center;
+}
+
+.title {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: $white;
+}
+
+.btn {
+    width: 254px;
+}
+
+.items {
+    display: flex;
+    @include list(12px, true);
+}

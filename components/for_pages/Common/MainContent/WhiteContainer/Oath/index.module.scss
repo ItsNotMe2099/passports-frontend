@@ -1,0 +1,43 @@
+@import "styles/index";
+
+.root {
+    display: flex;
+    position: relative;
+    padding: 60px 46px;
+    padding-right: 35px;
+    padding-top: 23px;
+    justify-content: space-between;
+
+    img {
+        border-radius: 30px;
+    }
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    @include list(71px, false);
+    position: relative;
+    margin-top: 37px;
+}
+
+.title {
+    color: #FFF;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.items {
+    display: flex;
+    @include list(16px, true);
+}
+
+.icon {
+    border-radius: 100%;
+}
+
+.symbol {
+    position: relative;
+}

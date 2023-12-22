@@ -1,0 +1,40 @@
+@import "styles/index";
+
+.root {
+    display: flex;
+    @include list(16px, true);
+}
+
+.icon {
+    border-radius: 16px;
+    background: #FFF;
+    display: flex;
+    padding: 8px;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    align-self: baseline;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    @include list(8px, false);
+}
+
+.title {
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.text {
+    color: #687CA2;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}

@@ -1,0 +1,59 @@
+@import "styles/index";
+
+.root {
+    display: flex;
+    @include list(8px, true);
+}
+
+.left {
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    @include list(10px, false);
+    border-radius: 32px;
+    background: #FFF;
+}
+
+.company {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    font-family: 'Genos';
+    color: $dark;
+}
+
+.title {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: $dark;
+}
+
+.list {
+    list-style-type: disc;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    color: #687CA2;
+    padding-left: 24px;
+}
+
+.right {
+    padding: 24px;
+    flex: 1;
+    background-size: cover;
+    position: relative;
+
+    img {
+        border-radius: 32px;
+    }
+}
+
+.item {
+    position: absolute;
+}
