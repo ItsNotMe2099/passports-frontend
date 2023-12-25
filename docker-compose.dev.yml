@@ -13,7 +13,7 @@ services:
           args:
             - ENV_FILE=.env.dev
         image: ${APP_IMAGE}
-        container_name: jobbro-front-app
+        container_name: passport-sites-app
         restart: ${DK_RESTART}
         logging:
           driver: 'json-file'
@@ -29,7 +29,7 @@ services:
         args:
           - APP_IMAGE=${APP_IMAGE}
       image: ${NGINX_IMAGE}
-      container_name: jobbro-front-nginx
+      container_name: passport-sites-nginx
       logging:
         driver: 'json-file'
         options:
