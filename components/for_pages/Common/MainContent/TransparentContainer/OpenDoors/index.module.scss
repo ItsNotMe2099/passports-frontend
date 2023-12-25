@@ -3,6 +3,10 @@
 .root {
     display: flex;
     @include list(8px, true);
+
+    @include mq($TabletWidth, max) {
+        flex-direction: column-reverse;
+    }
 }
 
 .left {
@@ -12,6 +16,14 @@
     @include list(10px, false);
     border-radius: 32px;
     background: #FFF;
+
+    @include mq($SmDesktopWidth, max) {
+        flex: 1;
+    }
+
+    @include mq($TabletWidth, max) {
+        margin-top: 16px;
+    }
 }
 
 .company {
@@ -52,8 +64,22 @@
     img {
         border-radius: 32px;
     }
+
+    @include mq($TabletWidth, max) {
+        padding: 0;
+        margin-left: 0;
+
+        img {
+            position: relative !important;
+        }
+    }
 }
 
 .item {
     position: absolute;
+
+    @include mq($TabletWidth, max) {
+        top: 24px;
+        left: 24px;
+    }
 }

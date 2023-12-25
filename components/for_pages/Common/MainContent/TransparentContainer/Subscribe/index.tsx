@@ -4,6 +4,7 @@ import classNames from 'classnames'
 import { Routes } from '@/types/routes'
 import Button from '@/components/ui/Button'
 import Image from 'next/image'
+import { useResize } from '@/components/hooks/useResize'
 
 interface Props {
 
@@ -12,6 +13,8 @@ interface Props {
 export default function Subscribe(props: Props) {
 
   const router = useRouter()
+
+  const { isSmDesktopWidth, isPhoneWidth } = useResize()
 
   const getCountry = () => {
     if (router.asPath === Routes.bulgaria) {
@@ -36,32 +39,36 @@ export default function Subscribe(props: Props) {
 
   const getImg = () => {
     if (router.asPath === Routes.bulgaria) {
-      return '/img/bulgaria-phone.png'
+      return isSmDesktopWidth ? '/img/bulgaria-phone-mobile.png' : '/img/bulgaria-phone.png'
     }
     else if (router.asPath === Routes.romania) {
-      return '/img/romania-phone.png'
+      return isSmDesktopWidth ? '/img/romania-phone-mobile.png' : '/img/romania-phone.png'
     }
     else {
-      return '/img/slovenia-phone.png'
+      return isSmDesktopWidth ? '/img/slovenia-phone-mobile.png' : '/img/slovenia-phone.png'
     }
   }
 
+
+
   return (
     <div className={classNames(styles.root, { [styles.bulgaria]: router.asPath === Routes.bulgaria })}>
-      <Image className={styles.phone} src={getImg()} alt='' fill />
+      {!isSmDesktopWidth && <Image className={styles.phone} src={getImg()} alt='' fill />}
       <div className={styles.title}>
         Будьте первыми в курсе<br /> свежих новостей!
       </div>
       <div className={styles.text}>
-        <>Переходите в наш Telegram канал, ведь там, мы публикуем самый<br />
-          актуальный контент на тему получения гражданства по<br />
+        <>Переходите в наш Telegram канал, ведь там, мы публикуем самый{!isPhoneWidth && <br />}
+          актуальный контент на тему получения гражданства по{!isPhoneWidth && <br />}
           государственной программе {getCountry()}</>
       </div>
       <Button
+        className={styles.btn}
         font={getBtnFontColor()}
         color={'white'}>
         Подписаться на наш Тelegram канал
       </Button>
+      {isSmDesktopWidth && <Image src={getImg()} alt='' width={253} height={235} />}
     </div>
   )
 }

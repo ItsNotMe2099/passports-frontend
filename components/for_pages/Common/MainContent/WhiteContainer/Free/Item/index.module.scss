@@ -29,6 +29,10 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+
+    @include mq($PhoneWidth + 1, max) {
+        font-size: 16px;
+    }
 }
 
 .text {

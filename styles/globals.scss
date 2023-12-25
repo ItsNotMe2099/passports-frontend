@@ -48,6 +48,10 @@ body {
   background-size: cover;
   color: #26324A;
 
+  @include mq($PhoneWidth + 1, max) {
+    background-image: url('../public/img/bg-mobile.png');
+  }
+
   &.modal-open {
     overflow-y: hidden;
   }

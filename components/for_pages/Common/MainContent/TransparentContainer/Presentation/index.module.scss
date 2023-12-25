@@ -7,6 +7,11 @@
     border-radius: 30px;
     background: #3575F5;
     align-items: center;
+
+    @include mq($PhoneWidth + 1, max) {
+        flex-direction: column;
+        @include list(40px, false);
+    }
 }
 
 .bulgaria {
@@ -19,4 +24,10 @@
     font-weight: 600;
     line-height: normal;
     color: $white;
+}
+
+.btn {
+    @include mq($PhoneWidth + 1, max) {
+        width: 100%;
+    }
 }

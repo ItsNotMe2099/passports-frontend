@@ -7,4 +7,18 @@
     display: flex;
     flex-direction: column;
     @include list(88px, false);
+
+    @include mq($MdDesktopWidth + 1, max) {
+        width: 95%;
+    }
+
+    @include mq($TabletWidth, max) {
+        @include list(40px, false);
+    }
+
+    @include mq($PhoneWidth + 1, max) {
+        width: inherit;
+        margin-left: 16px !important;
+        margin-right: 16px !important;
+    }
 }

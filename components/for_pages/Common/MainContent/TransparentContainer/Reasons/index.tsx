@@ -4,6 +4,7 @@ import { Routes } from '@/types/routes'
 import Privacy from './Privacy'
 import { colors } from '@/styles/variables'
 import Item from './Item'
+import { useResize } from '@/components/hooks/useResize'
 
 interface Props {
 
@@ -12,6 +13,8 @@ interface Props {
 export default function Reasons(props: Props) {
 
   const router = useRouter()
+
+  const { isPhoneWidth } = useResize()
 
   const getColor = () => {
     if (router.asPath !== Routes.bulgaria) {
@@ -62,7 +65,7 @@ export default function Reasons(props: Props) {
     },
     {
       title: <>Личный статус<br /> гражданина</>,
-      coloredText: 'к безграничным возможностям',
+      coloredText: <>к безграничным {isPhoneWidth && <br />} возможностям</>,
       text: 'Это не просто документ, а ключ'
     },
     {

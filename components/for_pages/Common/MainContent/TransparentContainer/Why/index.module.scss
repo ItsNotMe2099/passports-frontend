@@ -12,11 +12,20 @@
     font-weight: 600;
     line-height: normal;
     color: $dark;
+
+    @include mq($PhoneWidth + 1, max) {
+        font-size: 20px;
+    }
 }
 
 .items {
     display: flex;
     @include list(16px, true);
+
+    @include mq($TabletWidth, max) {
+        flex-direction: column;
+        @include list(16px, false);
+    }
 }
 
 .first {

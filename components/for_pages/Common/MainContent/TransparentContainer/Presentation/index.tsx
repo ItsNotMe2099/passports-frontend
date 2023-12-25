@@ -27,6 +27,7 @@ export default function Presentation(props: Props) {
         Презентация с полным описанием
       </div>
       <Button
+        className={styles.btn}
         font={getBtnFontColor()}
         color={'white'}>
         Смотреть онлайн

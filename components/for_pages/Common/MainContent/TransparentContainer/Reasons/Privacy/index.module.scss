@@ -9,6 +9,14 @@
     justify-content: space-between;
     padding-right: 97px;
     position: relative;
+
+    @include mq(1100px, max) {
+        padding-right: 50%;
+    }
+
+    @include mq($PhoneWidth + 1, max) {
+        padding-right: 32px;
+    }
 }
 
 .top {
@@ -38,4 +46,13 @@
     right: 0;
     bottom: 74px;
     position: absolute;
+
+    @include mq($MPhoneWidth + 1, max) {
+        display: none;
+    }
+}
+
+.btn {
+    position: relative;
+    z-index: 1;
 }

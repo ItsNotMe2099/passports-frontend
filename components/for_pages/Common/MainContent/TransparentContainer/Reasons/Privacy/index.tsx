@@ -23,6 +23,7 @@ export default function Privacy(props: Props) {
       </div>
       <Button
         font={props.fontColor}
+        className={styles.btn}
         color={'white'}>
         Бесплатная консультация
       </Button>

@@ -7,6 +7,7 @@ import { colors } from '@/styles/variables'
 import TimeCircleSvg from '@/components/svg/TimeCircleSvg'
 import WalletSvg from '@/components/svg/WalletSvg'
 import Item from './Item'
+import { useResize } from '@/components/hooks/useResize'
 
 interface Props {
 
@@ -22,11 +23,13 @@ export default function Top(props: Props) {
     { icon: <WalletSvg color={colors.white} />, text: 'Сэкономив до 500% с компанией Brix Law' },
   ]
 
+  const { isPhoneWidth } = useResize()
+
   return (
     <div className={styles.root}>
       <div className={styles.wrapper}>
         <div className={styles.title}>
-          Стань гражданином Евросоюза
+          Стань гражданином {isPhoneWidth && <br />} Евросоюза
         </div>
         <Button
           className={styles.btn}

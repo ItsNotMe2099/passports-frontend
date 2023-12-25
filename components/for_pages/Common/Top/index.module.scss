@@ -3,6 +3,10 @@
 .root {
     padding-top: 184px;
     padding-bottom: 81px;
+
+    @include mq($PhoneWidth + 1, max) {
+        padding-top: 60px;
+    }
 }
 
 .wrapper {
@@ -12,6 +16,15 @@
     margin: 0 auto;
     width: 58%;
     align-items: center;
+
+    @include mq($MdDesktopWidth + 1, max) {
+        width: 95%;
+    }
+
+    @include mq($PhoneWidth + 1, max) {
+        width: inherit;
+        margin: 0 22px;
+    }
 }
 
 .title {
@@ -20,6 +33,16 @@
     font-weight: 700;
     line-height: normal;
     color: $white;
+    white-space: nowrap;
+    text-align: center;
+
+    @include mq($SmDesktopWidth, max) {
+        white-space: unset;
+    }
+
+    @include mq($PhoneWidth + 1, max) {
+        font-size: 32px;
+    }
 }
 
 .btn {
@@ -29,4 +52,9 @@
 .items {
     display: flex;
     @include list(12px, true);
+
+    @include mq($PhoneWidth + 1, max) {
+        flex-direction: column;
+        @include list(12px, false);
+    }
 }

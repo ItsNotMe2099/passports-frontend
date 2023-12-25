@@ -54,7 +54,7 @@ export default function Footer(props: Props) {
     <div className={styles.root}>
       <div className={styles.wrapper}>
         <div className={styles.info}>
-          <Logo color={colors.dark} />
+          <Logo color={colors.dark} titleClass={styles.logoTitle} />
           <div className={styles.address}>
             {CONTACTS.address}
           </div>

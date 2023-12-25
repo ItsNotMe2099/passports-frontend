@@ -9,4 +9,14 @@
     display: flex;
     flex-direction: column;
     @include list(88px, false);
+
+    @include mq($TabletWidth, max) {
+        @include list(40px, false);
+    }
+
+    @include mq($PhoneWidth + 1, max) {
+        margin-top: -60px;
+        padding-top: 24px;
+        padding-bottom: 60px;
+    }
 }

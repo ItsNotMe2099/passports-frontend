@@ -9,10 +9,10 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 interface IOption {
-  icon: string
+  icon?: string
   label: string
   link: string
-  value: string
+  value?: string
 }
 
 
@@ -54,7 +54,7 @@ export default function DropdownMenu(props: Props) {
   return (
     <div className={classNames(styles.root, props.className)}>
       <a href="#" onClick={handleClick} className={classNames(styles.dropDownTrigger)}>
-        <Image className={styles.icon} src={currentOption.icon} alt='' width={24} height={24} />
+        {currentOption.icon && <Image className={styles.icon} src={currentOption.icon} alt='' width={24} height={24} />}
         <div className={styles.label}>
           <span style={{ color: `${props.color}` }}>{currentOption.label}</span>
         </div>

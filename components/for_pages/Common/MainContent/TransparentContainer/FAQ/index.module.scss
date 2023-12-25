@@ -12,6 +12,10 @@
     font-weight: 600;
     line-height: normal;
     color: $dark;
+
+    @include mq($PhoneWidth + 1, max) {
+        font-size: 20px;
+    }
 }
 
 .items {}

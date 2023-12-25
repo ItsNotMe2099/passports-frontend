@@ -11,6 +11,13 @@
     img {
         border-radius: 30px;
     }
+
+    @include mq($TabletWidth + 1, max) {
+        margin-left: -16px;
+        margin-right: -16px;
+        padding: 37px 15px;
+        justify-content: center;
+    }
 }
 
 .left {
@@ -19,6 +26,11 @@
     @include list(71px, false);
     position: relative;
     margin-top: 37px;
+
+    @include mq($TabletWidth + 1, max) {
+        margin-top: 0;
+        @include list(40px, false);
+    }
 }
 
 .title {
@@ -27,11 +39,21 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+
+    @include mq($PhoneWidth + 1, max) {
+        font-size: 20px;
+        text-align: center;
+    }
 }
 
 .items {
     display: flex;
     @include list(16px, true);
+
+    @include mq($PhoneWidth + 1, max) {
+        flex-direction: column;
+        @include list(16px, false);
+    }
 }
 
 .icon {
@@ -40,4 +62,8 @@
 
 .symbol {
     position: relative;
+
+    @include mq($TabletWidth + 1, max) {
+        display: none;
+    }
 }

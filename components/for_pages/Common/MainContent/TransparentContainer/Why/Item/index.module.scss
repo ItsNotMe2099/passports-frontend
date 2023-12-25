@@ -8,6 +8,10 @@
     align-items: flex-end;
     flex: 1;
 
+    @include mq($TabletWidth, max) {
+        min-height: 404px;
+    }
+
     img {
         border-radius: 30px;
     }
@@ -18,7 +22,7 @@
     flex-direction: column;
     @include list(16px, false);
     position: relative;
-    
+
 }
 
 .title {

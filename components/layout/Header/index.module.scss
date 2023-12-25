@@ -9,6 +9,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @include mq($MdDesktopWidth + 1, max) {
+    width: 95%;
+  }
 }
 
 .news {
@@ -50,4 +54,37 @@
   display: flex;
   @include list(8px, true);
   align-items: center;
+}
+
+.burger {
+  cursor: pointer;
+}
+
+.dropdown {
+  background-color: $white;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  top: 72px;
+  z-index: 4;
+  padding: 0 23px;
+}
+
+.mobile {
+  flex-direction: column;
+  @include list(16px, false);
+
+  .menu,
+  .right {
+    flex-direction: column;
+    align-items: flex-start;
+    @include list(16px, false);
+  }
+}
+
+.logoTitle {
+  @include mq(800px, max) {
+    font-size: 14px;
+  }
 }

@@ -3,6 +3,7 @@ import styles from './index.module.scss'
 import Image from 'next/image'
 import Item from '../../../Top/Item'
 import { Routes } from '@/types/routes'
+import { useResize } from '@/components/hooks/useResize'
 
 interface Props {
 
@@ -11,6 +12,8 @@ interface Props {
 export default function Oath(props: Props) {
 
   const router = useRouter()
+
+  const { isPhoneWidth } = useResize()
 
   const getImg = () => {
     if (router.asPath === Routes.bulgaria) {
@@ -52,7 +55,7 @@ export default function Oath(props: Props) {
 
   return (
     <div className={styles.root}>
-      <Image src={'/img/bg3.png'} alt='' fill />
+      <Image src={isPhoneWidth ? '/img/bg3-mobile.png' : '/img/bg3.png'} alt='' fill />
       <div className={styles.left}>
         <div className={styles.title}>
           Текст присяги на гражданство

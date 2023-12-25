@@ -10,6 +10,13 @@
     padding: 64px;
     padding-bottom: 40px;
     position: relative;
+
+    @include mq($SmDesktopWidth + 1, max) {
+        padding: 16px;
+        align-items: center;
+        @include list(24px, false);
+        padding-bottom: 0;
+    }
 }
 
 .title {
@@ -19,6 +26,14 @@
     font-weight: 600;
     line-height: normal;
     margin-top: 0;
+
+    @include mq($SmDesktopWidth + 1, max) {
+        text-align: center;
+    }
+
+    @include mq($PhoneWidth + 1, max) {
+        font-size: 20px;
+    }
 }
 
 .bulgaria {
@@ -31,6 +46,14 @@
     font-style: normal;
     font-weight: 500;
     line-height: 22px;
+
+    @include mq($SmDesktopWidth + 1, max) {
+        text-align: center;
+    }
+
+    @include mq($PhoneWidth + 1, max) {
+        font-size: 14px;
+    }
 }
 
 .phone {
@@ -39,4 +62,10 @@
     inset: unset !important;
     right: 0 !important;
     top: -40% !important;
+}
+
+.btn {
+    @include mq($PhoneWidth + 1, max) {
+        font-size: 14px !important;
+    }
 }

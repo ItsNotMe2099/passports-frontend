@@ -4,6 +4,13 @@
     display: flex;
     @include list(8px, true);
     align-items: center;
+
+    svg {
+        @include mq(800px, max) {
+            width: 42px;
+            height: 29px;
+        } 
+    }
 }
 
 .title {
