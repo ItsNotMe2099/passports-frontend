@@ -1,6 +1,3 @@
-import TransparentContainer from './TransparentContainer'
-import WhiteContainer from './WhiteContainer'
-import styles from './index.module.scss'
 import Reasons from './TransparentContainer/Reasons'
 import OpenDoors from './TransparentContainer/OpenDoors'
 import Why from './TransparentContainer/Why'
@@ -11,6 +8,9 @@ import Subscribe from './TransparentContainer/Subscribe'
 import Free from './WhiteContainer/Free'
 import Oath from './WhiteContainer/Oath'
 import FAQ from './TransparentContainer/FAQ'
+import PageContent from '../../Common/PageContent'
+import TransparentContainer from '../../Common/TransparentContainer'
+import WhiteContainer from '../../Common/WhiteContainer'
 
 interface Props {
 
@@ -19,7 +19,7 @@ interface Props {
 export default function MainContent(props: Props) {
 
   return (
-    <div className={styles.root}>
+    <PageContent>
       <TransparentContainer>
         <Reasons />
         <OpenDoors />
@@ -40,6 +40,6 @@ export default function MainContent(props: Props) {
       <TransparentContainer>
         <FAQ />
       </TransparentContainer>
-    </div>
+    </PageContent>
   )
 }

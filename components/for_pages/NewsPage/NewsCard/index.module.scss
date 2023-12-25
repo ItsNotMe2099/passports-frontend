@@ -1,0 +1,59 @@
+@import "styles/index";
+
+.root {
+    border-radius: 40px;
+    background: #FFF;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    @include list(16px, false);
+    position: relative;
+    width: calc(33% - 16px);
+    margin-bottom: 16px;
+    margin-right: 16px;
+
+    img {
+        height: 241px !important;
+        position: relative !important;
+    }
+}
+
+.title {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: $black;
+}
+
+.text {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.date {
+    color: #687CA2;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.link {
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    background-color: #4982F3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
